@@ -14,48 +14,108 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <h1>Index page</h1>
-      <p>Hello from partials/_header.html</p>
-      <svg class="icon icon-facebook">
-        <use xlink:href="img/sprite.svg#icon-facebook"></use>
-      </svg>
-      <p>
-        <!-- begin input -->
-        <label class="checkbox">
-          <input type="checkbox" name="checkbox">
-          <span class="checkbox__text">checkbox</span>
-        </label>
-        <!-- end input -->
-      </p>
-      <p>
-        <!-- begin input -->
-        <label class="checkbox">
-          <input type="checkbox" name="exemple-name" checked>
-          <span class="checkbox__text">checkbox-checked</span>
-        </label>
-        <!-- end input -->
-      </p>
-      <!-- begin input -->
-      <label class="radio">
-        <input type="radio" name="exemple-name">
-        <span class="radio__text">text</span>
-      </label>
-      <!-- end input -->
-      <!-- begin breadcrumbs -->
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-          <a href="#">Главная</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="#">Внутренняя</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <span>Корзина</span>
-        </li>
-      </ul>
-      <!-- end breadcrumbs -->
-      <li>Item1</li>
-      <li>Item2</li>
+      <div class="inner-sm">
+        <h1>Index page</h1>
+        <div class="portfolio row">
+          <div class="portfolio__item col-6 col-sm-12">
+            <div class="portfolio-item">
+              <div class="portfolio-item__image-wrapper">
+                <div class="portfolio-item__image" style="background-image: url(./img/klimov.png)"></div>
+              </div>
+              <div class="portfolio-item__content">
+                <h3 class="portfolio-item__title title">Klimov Agency</h3>
+                <div class="portfolio-item__descr">
+                  <p>Верстка HTML/CSS</p>
+                  <p>JS скрипты(с подключением библиотек анимации и фильтров).<p>
+                      <p>Первая версия сайта строилась на JSON файлax, есть опыт верстки JSON -> Nunjucks templates.</p>
+                </div>
+                <div class="portfolio-item__btn">
+                  <a href='http://klimov.agency/' target='_blank' class="link-btn">
+                    <span class="link-btn__text">View project</span>
+                    <span class="link-btn__icon">
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__item col-6 col-sm-12">
+            <div class="portfolio-item">
+              <div class="portfolio-item__image-wrapper">
+                <div class="portfolio-item__image" style="background-image: url(./img/klimov.png)"></div>
+              </div>
+              <div class="portfolio-item__content">
+                <h3 class="portfolio-item__title title">Bamboobar</h3>
+                <div class="portfolio-item__descr">
+                  <p>Верстка HTML/CSS</p>
+                  <p>Валидация форм</p>
+                  <p>Скрипты отправки имейлов с заказами</p>
+                </div>
+                <div class="portfolio-item__btn">
+                  <a href='https://bamboobar.su/banket-mocow-city/' target='_blank' class="link-btn">
+                    <span class="link-btn__text">View project</span>
+                    <span class="link-btn__icon">
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__item col-6 col-sm-12">
+            <div class="portfolio-item">
+              <div class="portfolio-item__image-wrapper">
+                <div class="portfolio-item__image" style="background-image: url(./img/iugo.png)"></div>
+              </div>
+              <div class="portfolio-item__content">
+                <h3 class="portfolio-item__title title">IUGO</h3>
+                <div class="portfolio-item__descr">
+                  <p>Верстка HTML/CSS</p>
+                </div>
+                <div class="portfolio-item__btn">
+                  <a href='http://www.iugo.com.uy/development' target='_blank' class="link-btn">
+                    <span class="link-btn__text">View project</span>
+                    <span class="link-btn__icon">
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__item col-6 col-sm-12">
+            <div class="portfolio-item">
+              <div class="portfolio-item__image-wrapper">
+                <div class="portfolio-item__image" style="background-image: url(./img/iugo.png)"></div>
+              </div>
+              <div class="portfolio-item__content">
+                <h3 class="portfolio-item__title title">Laywer</h3>
+                <div class="portfolio-item__descr">
+                  <p>Верстка HTML/CSS для страницы блога</p>
+                  <p>Модалки для форм, валидация</p>
+                </div>
+                <div class="portfolio-item__btn">
+                  <a href='http://alexistomin.ru/blog' target='_blank' class="link-btn">
+                    <span class="link-btn__text">View project</span>
+                    <span class="link-btn__icon">
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
