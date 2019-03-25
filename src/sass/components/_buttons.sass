@@ -1,0 +1,32 @@
+.link-btn
+	display: flex
+	align-items: center
+	background: none
+	font-family: $roboto
+	// color: $text
+	color: $white
+	letter-spacing: 0.05em
+	text-transform: uppercase
+	text-decoration: none
+	font-size: 0
+	+sm
+		height: 30px
+		color: $blue
+	+hover
+		.link-btn__icon
+			transform: translateX(3px)
+	&__text
+		font-size: 12px
+	&__icon
+		position: relative
+		margin-left: 5px
+		transition: transform .3s
+		.icon
+			font-size: 12px
+
+.social-link
+	background: none
+	display: inline-block
+	.icon
+		font-size: 24px
+		color: $text

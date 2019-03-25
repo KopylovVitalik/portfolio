@@ -1,0 +1,79 @@
+.portfolio-item
+	position: relative
+	padding: 30px 20px 20px
+	color: $white
+	+sm 
+		color: $text
+		padding: 0
+	+hover
+		.portfolio-item__image
+			transform: scale(1.04)
+			&:before
+				opacity: 0.95
+		.portfolio-item__content
+			+fadein
+	&__image-wrapper
+		+coverdiv
+		overflow: hidden
+		+sm
+			position: relative
+			padding-bottom: 50%
+			margin-bottom: 16px
+	&__image
+		+coverdiv
+		+cover
+		transition: transform $trLong
+		backface-visibility: hidden
+		&:before
+			content: ''
+			+coverdiv
+			opacity: 0
+			background: $portfolioGrad
+			transition: opacity $trLong
+			+sm 
+				display: none
+	&__content
+		position: relative
+		z-index: 5
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: space-between
+		min-height: 274px
+		+fadeout($trLong)
+		+sm 
+			min-height: 0
+			+fadein
+	.link-btn
+		&:after
+			content: ''
+			+coverdiv
+			+sm 
+				display: none
+	&__title
+		margin-bottom: 16px
+		+sm 
+			margin-bottom: 4px
+	&__descr
+		font-size: 12px
+		max-width: 190px
+		margin-bottom: 12pxß
+		+sm 
+			max-width: none
+		p
+			&:not(:last-child)
+				margin-bottom: 6px
+				+sm 
+					margin-bottom: 3px
+
+.portfolio
+	display: flex
+	flex-wrap: wrap
+	&__item
+		padding-bottom: 30px
+		+sm
+			// border-top: 1px solid $text
+			padding-bottom: 40px
+			&:last-child
+				padding-bottom: 0
+

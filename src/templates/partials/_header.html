@@ -1,0 +1,29 @@
+<header class="header">
+  <div class="header__inner inner-sm">
+    <div class="header__name">
+      <h1 class='title-lg'>Копылов Виталий</h1>
+      <div class="descr">Front-End Developer</div>
+      <!-- {% include "partials/_social-links.html" %} -->
+    </div>
+    <div class="header__links">
+      <ul class="social-links row">
+        {% for item in [
+          {
+            link: 'https://www.linkedin.com/in/vitaly-kopylov-5b7ba417/',
+            text: 'linkedin'
+          },
+          {
+            link: 'https://github.com/KopylovVitalik',
+            text: 'github'
+          }
+        ] %}
+          <li class="social-links__item col-6">
+            <a href="{{ item.link }}" class="social-link">
+              <span>{{ item.text }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</header>

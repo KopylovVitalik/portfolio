@@ -1,0 +1,23 @@
+//FONTS
+=fontpath($name, $name1, $file)
+	src: local($name), local($name1), url("../fonts/" + $file + ".woff2") format("woff2"), url("../fonts/" + $file + ".woff") format("woff")
+=fontdefault($style, $weight, $name)
+	font-family: $name
+	font-style: $style
+	font-weight: $weight
+
+$lora: 'Lora'
+// $merri: 'Merriweather'
+$roboto: 'Roboto'
+
+@font-face
+	+fontdefault(normal, 700, $lora)
+	+fontpath('Lora-Bold', 'Lora-Bold', Lora-Bold)
+
+// @font-face
+// 	+fontdefault(normal, 400, $merri)
+// 	+fontpath('Merriweather-Regular', 'Merriweather-Regular', Merriweather-Regular)
+
+@font-face
+	+fontdefault(normal, 400, $roboto)
+	+fontpath('Roboto-Regular', 'Roboto-Regular', Roboto-Regular)

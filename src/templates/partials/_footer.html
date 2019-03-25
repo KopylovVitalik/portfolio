@@ -1,0 +1,24 @@
+<footer class="footer">
+  <div class="footer__inner inner-sm">
+    <div class="footer__links">
+      <ul class="social-links">
+        {% for item in [
+          {
+            link: 'https://www.linkedin.com/in/vitaly-kopylov-5b7ba417/',
+            icon: 'linkedin'
+          },
+          {
+            link: 'https://github.com/KopylovVitalik',
+            icon: 'github'
+          }
+        ] %}
+          <li class="social-links__item">
+            <a href="{{ item.link }}" class="social-link">
+              {{ mixins.icon(item.icon) }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</footer>

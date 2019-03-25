@@ -1,0 +1,87 @@
+{% macro portfolio(props) %}
+	<div class="portfolio-item">
+    <div class="portfolio-item__image-wrapper">
+      <div
+        class="portfolio-item__image"
+        style="background-image: url(./img/{{ props.image }})"
+      ></div>
+		</div>
+		<div class="portfolio-item__content">
+			<h3 class="portfolio-item__title title">{{ props.title }}</h3>
+			<div class="portfolio-item__descr">{{ props.descr | safe }}</div>
+			<div class="portfolio-item__btn">
+				<a href='{{ props.link }}' target='_blank' class="link-btn">
+					<span class="link-btn__text">View project</span>
+					<span class="link-btn__icon">
+						{{ mixins.icon('arrow-right') }}
+					</span>
+				</a>
+			</div>
+		</div>
+  </div>
+{% endmacro %}
+
+<div class="portfolio row">
+	{% for item in [
+		{
+			title: 'IUGO',
+			image: 'iugo.png',
+			descr: '
+				<p>Верстка HTML/CSS</p>
+			',
+			link: 'http://www.iugo.com.uy/development'
+		},
+		{
+			title: 'Gift of the East',
+			image: 'gift.jpg',
+			descr: "
+				<p>Верстка компонентов Catalog, Filters, Modal, Loader, Search, OffersSlider</p>
+				<p>Верстка страниц 'Personal Account -', 'Customers Info', 'Club Info'</p>
+				<p>Весь функционал страницы 'Shops'</p>
+			",
+			link: 'https://rawgit.com/DibssSolutions/gift-of-the-east/master/build/shops.html'
+		},
+		{
+			title: 'PaymeSwiss',
+			image: 'paymeswiss.png',
+			descr: '
+				<p>Верстка HTML/CSS</p>
+				<p>Кастомная скролл-анимация с использованием  GreenSock для stagger-анимаций</p>
+			',
+			link: 'http://paymeswiss.com'
+		},
+		{
+			title: 'Lawyer',
+			image: 'lawyer.png',
+			descr: '
+				<p>Верстка HTML/CSS для страницы блога</p>
+				<p>Модалки для форм, валидация</p>
+			',
+			link: 'http://alexistomin.ru/blog'
+		},
+		{
+			title: 'Klimov Agency',
+			image: 'klimov.jpg',
+			descr: '
+				<p>Верстка HTML/CSS</p>
+				<p>JS скрипты(с подключением библиотек анимации и фильтров).<p>
+				<p>Первая версия сайта строилась на JSON файлax, есть опыт верстки JSON -> Nunjucks templates.</p>
+			',
+			link: 'http://klimov.agency/'
+		},
+		{
+			title: 'Bamboobar',
+			image: 'bamboo.png',
+			descr: '
+				<p>Верстка HTML/CSS</p>
+				<p>Валидация форм</p>
+				<p>Скрипты отправки имейлов с заказами</p>
+			',
+			link: 'https://bamboobar.su/banket-mocow-city/'
+		}
+	] %}
+		<div class="portfolio__item col-6 col-sm-12">
+			{{ portfolio(item) }}
+		</div>
+	{% endfor %}
+</div>
