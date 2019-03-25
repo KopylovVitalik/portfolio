@@ -1,11 +1,16 @@
 .portfolio-item
 	position: relative
-	padding: 30px 20px 20px
 	color: $white
-	+sm 
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.15)
+	transition: box-shadow 0.3s
+	+xs 
 		color: $text
 		padding: 0
+		box-shadow: none
 	+hover
+		box-shadow: 0 11px 43px 0 rgba(7,42,68,.3)
+		+sm 
+			box-shadow: none
 		.portfolio-item__image
 			transform: scale(1.04)
 			&:before
@@ -13,14 +18,13 @@
 		.portfolio-item__content
 			+fadein
 	&__image-wrapper
-		+coverdiv
+		
 		overflow: hidden
-		+sm
+		+xs
 			position: relative
-			padding-bottom: 50%
 			margin-bottom: 16px
 	&__image
-		+coverdiv
+		padding-bottom: 65%
 		+cover
 		transition: transform $trLong
 		backface-visibility: hidden
@@ -30,19 +34,21 @@
 			opacity: 0
 			background: $portfolioGrad
 			transition: opacity $trLong
-			+sm 
+			+xs
 				display: none
 	&__content
-		position: relative
-		z-index: 5
+		+coverdiv
+		padding: 30px 20px 20px
 		display: flex
 		flex-direction: column
 		align-items: flex-start
 		justify-content: space-between
-		min-height: 274px
+		z-index: 5
 		+fadeout($trLong)
-		+sm 
-			min-height: 0
+		+lg 
+			padding: 20px 20px 10px
+		+xs
+			position: relative
 			+fadein
 	.link-btn
 		&:after
@@ -52,13 +58,15 @@
 				display: none
 	&__title
 		margin-bottom: 16px
-		+sm 
+		+xs
 			margin-bottom: 4px
 	&__descr
 		font-size: 12px
 		max-width: 190px
-		margin-bottom: 12pxß
-		+sm 
+		margin-bottom: 12px
+		+lg 
+			max-width: 250px
+		+xs
 			max-width: none
 		p
 			&:not(:last-child)
@@ -69,10 +77,11 @@
 .portfolio
 	display: flex
 	flex-wrap: wrap
+	+md 
+		justify-content: center
 	&__item
 		padding-bottom: 30px
-		+sm
-			// border-top: 1px solid $text
+		+xs
 			padding-bottom: 40px
 			&:last-child
 				padding-bottom: 0

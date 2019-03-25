@@ -24,6 +24,16 @@
 <div class="portfolio row">
 	{% for item in [
 		{
+			title: 'Ivchenko Design',
+			image: 'ivchenko.png',
+			descr: '
+				<p>Верстка страниц "Works", "Work-item", "About", "Contacts", секций на главной</p>
+				<p>Верстка и логика лоадеров</p>
+				<p>Участие в разработке скролл-анимации на основе GSAP</p>
+			',
+			link: 'https://www.ivchenko.design/'
+		},
+		{
 			title: 'IUGO',
 			image: 'iugo.png',
 			descr: '
@@ -80,7 +90,7 @@
 			link: 'https://bamboobar.su/banket-mocow-city/'
 		}
 	] %}
-		<div class="portfolio__item col-6 col-sm-12">
+		<div class="portfolio__item col-6 col-md-8 col-xs-12">
 			{{ portfolio(item) }}
 		</div>
 	{% endfor %}
