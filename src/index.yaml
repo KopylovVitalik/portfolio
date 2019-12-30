@@ -1,5 +1,5 @@
 ProjectTitle: template
 
 PageList:
-- file: page.html
+- file: portfolio.html
   ready: 50
